@@ -1,18 +1,7 @@
 # Navigation-System-for-Efficient-Ride-Sharing
 Ride-sharing helps reduce traffic and carbon emissions by combining passengers traveling along similar routes. This paper presents a navigation system that uses Greedy Best First Search, A*, Ant Colony Optimization, and Genetic Algorithm to generate optimized routes based on pickup/drop-off locations, traffic conditions, and allow route deviations.
 
-# 🚗 Navigation System for Efficient Ride Sharing  
-### (CSCI-564: Constraint Processing & Heuristic Search)
-
-## 📌 Project Overview
-
-This project implements and compares multiple search and optimization algorithms for solving a multi-city route optimization problem using real geographic coordinates.
-
-The goal is to design an efficient navigation system for ride-sharing by computing optimal routes across 50 cities in California.
-
----
-
-## 🧠 Algorithms Implemented
+##  Algorithms Implemented
 
 - Greedy Best First Search  
 - A* Search (Beam Search Variant)  
@@ -27,18 +16,7 @@ Each algorithm is evaluated based on:
 
 ---
 
-## 📊 Results Summary
-
-| Algorithm | Distance (km) | Performance |
-|----------|-------------|------------|
-| Greedy Best First Search | 2125.44 | Worst (local optimum) |
-| A* (Beam Search) | 1523.35 | Good |
-| Ant Colony Optimization | 1904.84 | Moderate |
-| Genetic Algorithm | 1476.35 | Best |
-
----
-
-## ⚙️ Features
+##  Features
 
 - Real-world geographic coordinates (50 cities)  
 - Distance calculation using Haversine formula  
@@ -49,7 +27,7 @@ Each algorithm is evaluated based on:
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```
 ├── a_star_beam_50cities.py
@@ -94,7 +72,7 @@ AStar_beam_50cities_route.html
 
 ---
 
-## 📈 Key Observations
+## Key Observations
 
 - Genetic Algorithm produced the shortest route → best performance  
 - A* provided a good balance between efficiency and accuracy  
@@ -103,7 +81,7 @@ AStar_beam_50cities_route.html
 
 ---
 
-## 🔮 Future Improvements
+##  Future Improvements
 
 - Integrate real-time traffic data  
 - Improve heuristic functions  
@@ -112,12 +90,12 @@ AStar_beam_50cities_route.html
 
 ---
 
-## 👨‍💻 Author
+##  Author
 
 Shahidafreedi Patel  
 
 ---
 
-## 📜 License
+##  License
 
 This project is for academic purposes only.
