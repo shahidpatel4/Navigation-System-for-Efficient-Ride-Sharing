@@ -1,0 +1,2007 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_735af1956ec13aec709ea9ccf16949f7 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_735af1956ec13aec709ea9ccf16949f7" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_735af1956ec13aec709ea9ccf16949f7 = L.map(
+                "map_735af1956ec13aec709ea9ccf16949f7",
+                {
+                    center: [37.7749, -122.4194],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 6,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_02efd85afa6996234b6efcc813b84509 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_02efd85afa6996234b6efcc813b84509.addTo(map_735af1956ec13aec709ea9ccf16949f7);
+        
+    
+            var poly_line_36a3cfa4943ec0f0ab3a3ebfb77afb47 = L.polyline(
+                [[37.7749, -122.4194], [37.8044, -122.2712], [37.8715, -122.273], [38.1041, -122.2566], [38.4405, -122.7144], [38.5816, -121.4944], [38.7521, -121.288], [38.4088, -121.3716], [37.9577, -121.2908], [37.6391, -120.9969], [37.3541, -121.9552], [37.3688, -122.0363], [37.5485, -121.9886], [37.6688, -122.0808], [37.978, -122.0311], [37.3382, -121.8863], [36.6777, -121.6555], [36.7378, -119.7871], [36.3302, -119.2921], [35.3733, -119.0187], [34.1975, -119.1771], [34.1706, -118.8376], [34.2694, -118.7815], [34.3917, -118.5426], [34.6868, -118.1542], [34.5794, -118.1165], [34.1425, -118.2551], [33.8358, -118.3406], [33.7701, -118.1937], [33.6595, -117.9988], [33.6846, -117.8265], [33.7455, -117.8677], [33.7879, -117.8531], [33.7743, -117.9379], [33.8366, -117.9143], [33.8704, -117.9242], [34.0551, -117.749], [34.0633, -117.6509], [34.1064, -117.5931], [33.1959, -117.3795], [32.7157, -117.1611], [32.6401, -117.0842], [33.1192, -117.0864], [33.9425, -117.2297], [33.9806, -117.3755], [34.0922, -117.435], [34.1083, -117.2898], [34.5361, -117.2912], [34.1478, -118.1445], [34.0522, -118.2437]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_735af1956ec13aec709ea9ccf16949f7);
+        
+    
+            var marker_e9eaa7f0cb9744b483fd90a1ee9d27a4 = L.marker(
+                [37.7749, -122.4194],
+                {
+}
+            ).addTo(map_735af1956ec13aec709ea9ccf16949f7);
+        
+    
+            var icon_37ed3ebce196d5558868379da3aa8977 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bb52dfa0e160f9d3060d20b20a0bcf4a = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_252ecd3192cbdf8b996f5fbfd593578e = $(`<div id="html_252ecd3192cbdf8b996f5fbfd593578e" style="width: 100.0%; height: 100.0%;"><b>Start</b><br>San Francisco<br>Step 1</div>`)[0];
+                popup_bb52dfa0e160f9d3060d20b20a0bcf4a.setContent(html_252ecd3192cbdf8b996f5fbfd593578e);
+            
+        
+
+        marker_e9eaa7f0cb9744b483fd90a1ee9d27a4.bindPopup(popup_bb52dfa0e160f9d3060d20b20a0bcf4a)
+        ;
+
+        
+    
+    
+                marker_e9eaa7f0cb9744b483fd90a1ee9d27a4.setIcon(icon_37ed3ebce196d5558868379da3aa8977);
+            
+    
+            var marker_44734a44ca5546fc2a0fc5bdb81ba77b = L.marker(
+                [37.8044, -122.2712],
+                {
+}
+            ).addTo(map_735af1956ec13aec709ea9ccf16949f7);
+        
+    
+            var icon_511e1e8c16db27a479dbe7ab252e2b3d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_654d72b7e82bf0fb20675c6a1e739506 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_12678e2ca93e75912aa894c3c2efa68e = $(`<div id="html_12678e2ca93e75912aa894c3c2efa68e" style="width: 100.0%; height: 100.0%;"><b>Stop 2</b><br>Oakland<br>Step 2</div>`)[0];
+                popup_654d72b7e82bf0fb20675c6a1e739506.setContent(html_12678e2ca93e75912aa894c3c2efa68e);
+            
+        
+
+        marker_44734a44ca5546fc2a0fc5bdb81ba77b.bindPopup(popup_654d72b7e82bf0fb20675c6a1e739506)
+        ;
+
+        
+    
+    
+                marker_44734a44ca5546fc2a0fc5bdb81ba77b.setIcon(icon_511e1e8c16db27a479dbe7ab252e2b3d);
+            
+    
+            var marker_e1a6cb40793d3cd9e83bcb3af77c52b6 = L.marker(
+                [37.8715, -122.273],
+                {
+}
+            ).addTo(map_735af1956ec13aec709ea9ccf16949f7);
+        
+    
+            var icon_b4e490448d40dd7ef7d6d1ea5d8a7741 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_62e3ab12cdf8d281fc5a56dc55fa3b0c = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_ceec58b5ff7dd52797f7e4ae7efff8b5 = $(`<div id="html_ceec58b5ff7dd52797f7e4ae7efff8b5" style="width: 100.0%; height: 100.0%;"><b>Stop 3</b><br>Berkeley<br>Step 3</div>`)[0];
+                popup_62e3ab12cdf8d281fc5a56dc55fa3b0c.setContent(html_ceec58b5ff7dd52797f7e4ae7efff8b5);
+            
+        
+
+        marker_e1a6cb40793d3cd9e83bcb3af77c52b6.bindPopup(popup_62e3ab12cdf8d281fc5a56dc55fa3b0c)
+        ;
+
+        
+    
+    
+                marker_e1a6cb40793d3cd9e83bcb3af77c52b6.setIcon(icon_b4e490448d40dd7ef7d6d1ea5d8a7741);
+            
+    
+            var marker_ace95d1afaeff80960bb492acec5970d = L.marker(
+                [38.1041, -122.2566],
+                {
+}
+            ).addTo(map_735af1956ec13aec709ea9ccf16949f7);
+        
+    
+            var icon_68e7a48dc0a71ffc3bfc660a60f39f6e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1739a83d35439ef0369a0cecc6693ba3 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_0e1d2b1b3da11f64fe1ab58e17b5dbee = $(`<div id="html_0e1d2b1b3da11f64fe1ab58e17b5dbee" style="width: 100.0%; height: 100.0%;"><b>Stop 4</b><br>Vallejo<br>Step 4</div>`)[0];
+                popup_1739a83d35439ef0369a0cecc6693ba3.setContent(html_0e1d2b1b3da11f64fe1ab58e17b5dbee);
+            
+        
+
+        marker_ace95d1afaeff80960bb492acec5970d.bindPopup(popup_1739a83d35439ef0369a0cecc6693ba3)
+        ;
+
+        
+    
+    
+                marker_ace95d1afaeff80960bb492acec5970d.setIcon(icon_68e7a48dc0a71ffc3bfc660a60f39f6e);
+            
+    
+            var marker_a8e46beed281c186b0095960f69c482e = L.marker(
+                [38.4405, -122.7144],
+                {
+}
+            ).addTo(map_735af1956ec13aec709ea9ccf16949f7);
+        
+    
+            var icon_d3c36c146e964c333de07848c6b63991 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_116ee43f3385cfcff142c23174639869 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_40d96af9b9987f386e84fcba2d669bee = $(`<div id="html_40d96af9b9987f386e84fcba2d669bee" style="width: 100.0%; height: 100.0%;"><b>Stop 5</b><br>Santa Rosa<br>Step 5</div>`)[0];
+                popup_116ee43f3385cfcff142c23174639869.setContent(html_40d96af9b9987f386e84fcba2d669bee);
+            
+        
+
+        marker_a8e46beed281c186b0095960f69c482e.bindPopup(popup_116ee43f3385cfcff142c23174639869)
+        ;
+
+        
+    
+    
+                marker_a8e46beed281c186b0095960f69c482e.setIcon(icon_d3c36c146e964c333de07848c6b63991);
+            
+    
+            var marker_febe565f07a62bc434bd285d1320d9d5 = L.marker(
+                [38.5816, -121.4944],
+                {
+}
+            ).addTo(map_735af1956ec13aec709ea9ccf16949f7);
+        
+    
+            var icon_b2ac070ac2842a77be2ca2a28bd56bd3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a8e36bcb16a45ec53a9a63eb1f24fe68 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_1ec2329bdabe0ecaa4597863edb02236 = $(`<div id="html_1ec2329bdabe0ecaa4597863edb02236" style="width: 100.0%; height: 100.0%;"><b>Stop 6</b><br>Sacramento<br>Step 6</div>`)[0];
+                popup_a8e36bcb16a45ec53a9a63eb1f24fe68.setContent(html_1ec2329bdabe0ecaa4597863edb02236);
+            
+        
+
+        marker_febe565f07a62bc434bd285d1320d9d5.bindPopup(popup_a8e36bcb16a45ec53a9a63eb1f24fe68)
+        ;
+
+        
+    
+    
+                marker_febe565f07a62bc434bd285d1320d9d5.setIcon(icon_b2ac070ac2842a77be2ca2a28bd56bd3);
+            
+    
+            var marker_ac011a7f0067a9d7a1a0b51e356fc1f8 = L.marker(
+                [38.7521, -121.288],
+                {
+}
+            ).addTo(map_735af1956ec13aec709ea9ccf16949f7);
+        
+    
+            var icon_18cdef03dabb1362dee58acf5437020d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_425ac79da8be81be34a4936c4d7f525a = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_9b1f755e644b7f8d60e51021ab41c9d0 = $(`<div id="html_9b1f755e644b7f8d60e51021ab41c9d0" style="width: 100.0%; height: 100.0%;"><b>Stop 7</b><br>Roseville<br>Step 7</div>`)[0];
+                popup_425ac79da8be81be34a4936c4d7f525a.setContent(html_9b1f755e644b7f8d60e51021ab41c9d0);
+            
+        
+
+        marker_ac011a7f0067a9d7a1a0b51e356fc1f8.bindPopup(popup_425ac79da8be81be34a4936c4d7f525a)
+        ;
+
+        
+    
+    
+                marker_ac011a7f0067a9d7a1a0b51e356fc1f8.setIcon(icon_18cdef03dabb1362dee58acf5437020d);
+            
+    
+            var marker_5fe96d8c460a35617ab87d9efcb60a61 = L.marker(
+                [38.4088, -121.3716],
+                {
+}
+            ).addTo(map_735af1956ec13aec709ea9ccf16949f7);
+        
+    
+            var icon_df4162af567f61bf5c602b888f04edf8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_909516f7195e823fe21f531674abf46e = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_495315650264b096a72365be8b14da47 = $(`<div id="html_495315650264b096a72365be8b14da47" style="width: 100.0%; height: 100.0%;"><b>Stop 8</b><br>Elk Grove<br>Step 8</div>`)[0];
+                popup_909516f7195e823fe21f531674abf46e.setContent(html_495315650264b096a72365be8b14da47);
+            
+        
+
+        marker_5fe96d8c460a35617ab87d9efcb60a61.bindPopup(popup_909516f7195e823fe21f531674abf46e)
+        ;
+
+        
+    
+    
+                marker_5fe96d8c460a35617ab87d9efcb60a61.setIcon(icon_df4162af567f61bf5c602b888f04edf8);
+            
+    
+            var marker_41f16dc820749328f06e0ac124a050dd = L.marker(
+                [37.9577, -121.2908],
+                {
+}
+            ).addTo(map_735af1956ec13aec709ea9ccf16949f7);
+        
+    
+            var icon_34a38a48fe263d83989832af48764497 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fd27a4a8aa4bfd9984df13783a53d1f5 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_228a1b6f6dd2b887c0ccc698f203174e = $(`<div id="html_228a1b6f6dd2b887c0ccc698f203174e" style="width: 100.0%; height: 100.0%;"><b>Stop 9</b><br>Stockton<br>Step 9</div>`)[0];
+                popup_fd27a4a8aa4bfd9984df13783a53d1f5.setContent(html_228a1b6f6dd2b887c0ccc698f203174e);
+            
+        
+
+        marker_41f16dc820749328f06e0ac124a050dd.bindPopup(popup_fd27a4a8aa4bfd9984df13783a53d1f5)
+        ;
+
+        
+    
+    
+                marker_41f16dc820749328f06e0ac124a050dd.setIcon(icon_34a38a48fe263d83989832af48764497);
+            
+    
+            var marker_bb78224b64f3b2215595a350473e3c02 = L.marker(
+                [37.6391, -120.9969],
+                {
+}
+            ).addTo(map_735af1956ec13aec709ea9ccf16949f7);
+        
+    
+            var icon_a5fc5e01b443caa0763f4b2773cb9a59 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3bb6906ff35a2a3f43e54883ea7b7dcf = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_5c755166549d3d3fac959598c0593d4a = $(`<div id="html_5c755166549d3d3fac959598c0593d4a" style="width: 100.0%; height: 100.0%;"><b>Stop 10</b><br>Modesto<br>Step 10</div>`)[0];
+                popup_3bb6906ff35a2a3f43e54883ea7b7dcf.setContent(html_5c755166549d3d3fac959598c0593d4a);
+            
+        
+
+        marker_bb78224b64f3b2215595a350473e3c02.bindPopup(popup_3bb6906ff35a2a3f43e54883ea7b7dcf)
+        ;
+
+        
+    
+    
+                marker_bb78224b64f3b2215595a350473e3c02.setIcon(icon_a5fc5e01b443caa0763f4b2773cb9a59);
+            
+    
+            var marker_707fbc46d57457af289b089bf87f419a = L.marker(
+                [37.3541, -121.9552],
+                {
+}
+            ).addTo(map_735af1956ec13aec709ea9ccf16949f7);
+        
+    
+            var icon_65f173e56b9272c6671b03149da372f3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3ad432de6e0d2c63ded7f893166ada36 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_0ce23c3995d1f968899c3a6c550845f1 = $(`<div id="html_0ce23c3995d1f968899c3a6c550845f1" style="width: 100.0%; height: 100.0%;"><b>Stop 11</b><br>Santa Clara<br>Step 11</div>`)[0];
+                popup_3ad432de6e0d2c63ded7f893166ada36.setContent(html_0ce23c3995d1f968899c3a6c550845f1);
+            
+        
+
+        marker_707fbc46d57457af289b089bf87f419a.bindPopup(popup_3ad432de6e0d2c63ded7f893166ada36)
+        ;
+
+        
+    
+    
+                marker_707fbc46d57457af289b089bf87f419a.setIcon(icon_65f173e56b9272c6671b03149da372f3);
+            
+    
+            var marker_0d2470bd035878ae95ebfaf30e8a9abd = L.marker(
+                [37.3688, -122.0363],
+                {
+}
+            ).addTo(map_735af1956ec13aec709ea9ccf16949f7);
+        
+    
+            var icon_2c87bfbd28b4848508ae1bf3b5bef4eb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_43579000d374a8fe7f889acbd9eae8e5 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_0e3ad0a708e9a23b91ca9244a1b5c6b3 = $(`<div id="html_0e3ad0a708e9a23b91ca9244a1b5c6b3" style="width: 100.0%; height: 100.0%;"><b>Stop 12</b><br>Sunnyvale<br>Step 12</div>`)[0];
+                popup_43579000d374a8fe7f889acbd9eae8e5.setContent(html_0e3ad0a708e9a23b91ca9244a1b5c6b3);
+            
+        
+
+        marker_0d2470bd035878ae95ebfaf30e8a9abd.bindPopup(popup_43579000d374a8fe7f889acbd9eae8e5)
+        ;
+
+        
+    
+    
+                marker_0d2470bd035878ae95ebfaf30e8a9abd.setIcon(icon_2c87bfbd28b4848508ae1bf3b5bef4eb);
+            
+    
+            var marker_3747f417b38f70a165c3c9d50c771607 = L.marker(
+                [37.5485, -121.9886],
+                {
+}
+            ).addTo(map_735af1956ec13aec709ea9ccf16949f7);
+        
+    
+            var icon_8d2e9f57ab55259910aa78b82fb4129a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_74014c3eabdc4f8b71d6b66ce97141f3 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_52129de4d1c92bfa240f3275fa49edd9 = $(`<div id="html_52129de4d1c92bfa240f3275fa49edd9" style="width: 100.0%; height: 100.0%;"><b>Stop 13</b><br>Fremont<br>Step 13</div>`)[0];
+                popup_74014c3eabdc4f8b71d6b66ce97141f3.setContent(html_52129de4d1c92bfa240f3275fa49edd9);
+            
+        
+
+        marker_3747f417b38f70a165c3c9d50c771607.bindPopup(popup_74014c3eabdc4f8b71d6b66ce97141f3)
+        ;
+
+        
+    
+    
+                marker_3747f417b38f70a165c3c9d50c771607.setIcon(icon_8d2e9f57ab55259910aa78b82fb4129a);
+            
+    
+            var marker_d868d049511196bc930b2414dfeb7aee = L.marker(
+                [37.6688, -122.0808],
+                {
+}
+            ).addTo(map_735af1956ec13aec709ea9ccf16949f7);
+        
+    
+            var icon_6a234653423a63bf7a0034a3bad85f60 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5d99eece72249fe09ad856bb887ad2a4 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_ca9c9516c69a4f51443eaa14d7365d34 = $(`<div id="html_ca9c9516c69a4f51443eaa14d7365d34" style="width: 100.0%; height: 100.0%;"><b>Stop 14</b><br>Hayward<br>Step 14</div>`)[0];
+                popup_5d99eece72249fe09ad856bb887ad2a4.setContent(html_ca9c9516c69a4f51443eaa14d7365d34);
+            
+        
+
+        marker_d868d049511196bc930b2414dfeb7aee.bindPopup(popup_5d99eece72249fe09ad856bb887ad2a4)
+        ;
+
+        
+    
+    
+                marker_d868d049511196bc930b2414dfeb7aee.setIcon(icon_6a234653423a63bf7a0034a3bad85f60);
+            
+    
+            var marker_4cad2e4268d1e412af16decea13ceb37 = L.marker(
+                [37.978, -122.0311],
+                {
+}
+            ).addTo(map_735af1956ec13aec709ea9ccf16949f7);
+        
+    
+            var icon_330ae84a3e57fd8e9a54c0de23586da2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8204bd34b31565bbf3a44ec41af02383 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_22058eefa0759bc5b5b1cccb147d28f6 = $(`<div id="html_22058eefa0759bc5b5b1cccb147d28f6" style="width: 100.0%; height: 100.0%;"><b>Stop 15</b><br>Concord<br>Step 15</div>`)[0];
+                popup_8204bd34b31565bbf3a44ec41af02383.setContent(html_22058eefa0759bc5b5b1cccb147d28f6);
+            
+        
+
+        marker_4cad2e4268d1e412af16decea13ceb37.bindPopup(popup_8204bd34b31565bbf3a44ec41af02383)
+        ;
+
+        
+    
+    
+                marker_4cad2e4268d1e412af16decea13ceb37.setIcon(icon_330ae84a3e57fd8e9a54c0de23586da2);
+            
+    
+            var marker_1bbb6ad9c4565a06c4b5832b5a7202ee = L.marker(
+                [37.3382, -121.8863],
+                {
+}
+            ).addTo(map_735af1956ec13aec709ea9ccf16949f7);
+        
+    
+            var icon_4b822be3369c6c25d92706129ef12201 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_18348bf3847f0347445d81948b6030f3 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_d0e6206e8ebda17255e7d6514f4a6315 = $(`<div id="html_d0e6206e8ebda17255e7d6514f4a6315" style="width: 100.0%; height: 100.0%;"><b>Stop 16</b><br>San Jose<br>Step 16</div>`)[0];
+                popup_18348bf3847f0347445d81948b6030f3.setContent(html_d0e6206e8ebda17255e7d6514f4a6315);
+            
+        
+
+        marker_1bbb6ad9c4565a06c4b5832b5a7202ee.bindPopup(popup_18348bf3847f0347445d81948b6030f3)
+        ;
+
+        
+    
+    
+                marker_1bbb6ad9c4565a06c4b5832b5a7202ee.setIcon(icon_4b822be3369c6c25d92706129ef12201);
+            
+    
+            var marker_09ba48640ff5a61a5942c8219a1798ea = L.marker(
+                [36.6777, -121.6555],
+                {
+}
+            ).addTo(map_735af1956ec13aec709ea9ccf16949f7);
+        
+    
+            var icon_84eac8c1d2aac1f109e8594ef293de9f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8ccdda3e4828de6819b1e12066d76685 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_da31ad1c42a2c112843640bb60cd55d2 = $(`<div id="html_da31ad1c42a2c112843640bb60cd55d2" style="width: 100.0%; height: 100.0%;"><b>Stop 17</b><br>Salinas<br>Step 17</div>`)[0];
+                popup_8ccdda3e4828de6819b1e12066d76685.setContent(html_da31ad1c42a2c112843640bb60cd55d2);
+            
+        
+
+        marker_09ba48640ff5a61a5942c8219a1798ea.bindPopup(popup_8ccdda3e4828de6819b1e12066d76685)
+        ;
+
+        
+    
+    
+                marker_09ba48640ff5a61a5942c8219a1798ea.setIcon(icon_84eac8c1d2aac1f109e8594ef293de9f);
+            
+    
+            var marker_d0a3ee142e24c4ab2ae31ed6525deba3 = L.marker(
+                [36.7378, -119.7871],
+                {
+}
+            ).addTo(map_735af1956ec13aec709ea9ccf16949f7);
+        
+    
+            var icon_a1befb25a07aadacbedbfb6c24d82718 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_88a09111a31edaa6825e847f59f183ae = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_9a7d1697e874953b18116ba28be87a91 = $(`<div id="html_9a7d1697e874953b18116ba28be87a91" style="width: 100.0%; height: 100.0%;"><b>Stop 18</b><br>Fresno<br>Step 18</div>`)[0];
+                popup_88a09111a31edaa6825e847f59f183ae.setContent(html_9a7d1697e874953b18116ba28be87a91);
+            
+        
+
+        marker_d0a3ee142e24c4ab2ae31ed6525deba3.bindPopup(popup_88a09111a31edaa6825e847f59f183ae)
+        ;
+
+        
+    
+    
+                marker_d0a3ee142e24c4ab2ae31ed6525deba3.setIcon(icon_a1befb25a07aadacbedbfb6c24d82718);
+            
+    
+            var marker_953378ca82d0d2232bd2816240a6bcb7 = L.marker(
+                [36.3302, -119.2921],
+                {
+}
+            ).addTo(map_735af1956ec13aec709ea9ccf16949f7);
+        
+    
+            var icon_feb2f347d85e2c5f3f9cb75f6800bf0b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_dae3201571fcb055bdba0a1c3f3402ba = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_3ae7ea92eceae9af548fe9f755630354 = $(`<div id="html_3ae7ea92eceae9af548fe9f755630354" style="width: 100.0%; height: 100.0%;"><b>Stop 19</b><br>Visalia<br>Step 19</div>`)[0];
+                popup_dae3201571fcb055bdba0a1c3f3402ba.setContent(html_3ae7ea92eceae9af548fe9f755630354);
+            
+        
+
+        marker_953378ca82d0d2232bd2816240a6bcb7.bindPopup(popup_dae3201571fcb055bdba0a1c3f3402ba)
+        ;
+
+        
+    
+    
+                marker_953378ca82d0d2232bd2816240a6bcb7.setIcon(icon_feb2f347d85e2c5f3f9cb75f6800bf0b);
+            
+    
+            var marker_bd24a7a25d02382be5adeec95c94231d = L.marker(
+                [35.3733, -119.0187],
+                {
+}
+            ).addTo(map_735af1956ec13aec709ea9ccf16949f7);
+        
+    
+            var icon_24edf41747879aa067812bc2ddc54a71 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bc4a4eb02b80827f086926904e6644ff = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_1f07b553aabe7cac8d8e224216dadd63 = $(`<div id="html_1f07b553aabe7cac8d8e224216dadd63" style="width: 100.0%; height: 100.0%;"><b>Stop 20</b><br>Bakersfield<br>Step 20</div>`)[0];
+                popup_bc4a4eb02b80827f086926904e6644ff.setContent(html_1f07b553aabe7cac8d8e224216dadd63);
+            
+        
+
+        marker_bd24a7a25d02382be5adeec95c94231d.bindPopup(popup_bc4a4eb02b80827f086926904e6644ff)
+        ;
+
+        
+    
+    
+                marker_bd24a7a25d02382be5adeec95c94231d.setIcon(icon_24edf41747879aa067812bc2ddc54a71);
+            
+    
+            var marker_ec5634b71b3dd68c4e3ebb48b9f934a7 = L.marker(
+                [34.1975, -119.1771],
+                {
+}
+            ).addTo(map_735af1956ec13aec709ea9ccf16949f7);
+        
+    
+            var icon_7ba841610329447556dad977d36fdbf5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5edca8d564f52c1aae71d0b480a31374 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_6f4910df18d2399a8f84f3aef60472a7 = $(`<div id="html_6f4910df18d2399a8f84f3aef60472a7" style="width: 100.0%; height: 100.0%;"><b>Stop 21</b><br>Oxnard<br>Step 21</div>`)[0];
+                popup_5edca8d564f52c1aae71d0b480a31374.setContent(html_6f4910df18d2399a8f84f3aef60472a7);
+            
+        
+
+        marker_ec5634b71b3dd68c4e3ebb48b9f934a7.bindPopup(popup_5edca8d564f52c1aae71d0b480a31374)
+        ;
+
+        
+    
+    
+                marker_ec5634b71b3dd68c4e3ebb48b9f934a7.setIcon(icon_7ba841610329447556dad977d36fdbf5);
+            
+    
+            var marker_e4c069ab0fc698ddad239b549613bcd9 = L.marker(
+                [34.1706, -118.8376],
+                {
+}
+            ).addTo(map_735af1956ec13aec709ea9ccf16949f7);
+        
+    
+            var icon_ca76249efc2c245c30345b99454e29e4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_14408825dc6c19b12a6996f5880c8d6f = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_2fe982a618f49af7390fd350f59a52bb = $(`<div id="html_2fe982a618f49af7390fd350f59a52bb" style="width: 100.0%; height: 100.0%;"><b>Stop 22</b><br>Thousand Oaks<br>Step 22</div>`)[0];
+                popup_14408825dc6c19b12a6996f5880c8d6f.setContent(html_2fe982a618f49af7390fd350f59a52bb);
+            
+        
+
+        marker_e4c069ab0fc698ddad239b549613bcd9.bindPopup(popup_14408825dc6c19b12a6996f5880c8d6f)
+        ;
+
+        
+    
+    
+                marker_e4c069ab0fc698ddad239b549613bcd9.setIcon(icon_ca76249efc2c245c30345b99454e29e4);
+            
+    
+            var marker_6181b2766573f58acdf6b542e979198b = L.marker(
+                [34.2694, -118.7815],
+                {
+}
+            ).addTo(map_735af1956ec13aec709ea9ccf16949f7);
+        
+    
+            var icon_3eac4fa5fc2595f2b189de2715aa0164 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9bc1e10342cef502a382bee531241f22 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_34e4a4008656b67d58eb93ff910bceff = $(`<div id="html_34e4a4008656b67d58eb93ff910bceff" style="width: 100.0%; height: 100.0%;"><b>Stop 23</b><br>Simi Valley<br>Step 23</div>`)[0];
+                popup_9bc1e10342cef502a382bee531241f22.setContent(html_34e4a4008656b67d58eb93ff910bceff);
+            
+        
+
+        marker_6181b2766573f58acdf6b542e979198b.bindPopup(popup_9bc1e10342cef502a382bee531241f22)
+        ;
+
+        
+    
+    
+                marker_6181b2766573f58acdf6b542e979198b.setIcon(icon_3eac4fa5fc2595f2b189de2715aa0164);
+            
+    
+            var marker_44ada9aa898dc8bb440cde4fab645cf8 = L.marker(
+                [34.3917, -118.5426],
+                {
+}
+            ).addTo(map_735af1956ec13aec709ea9ccf16949f7);
+        
+    
+            var icon_cb0e1028e29bda3616cd9ed446ffc933 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_dd609295e0ae00243b479c1d8919b01e = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_f7a9616112c08d29f6b05bed8c76933c = $(`<div id="html_f7a9616112c08d29f6b05bed8c76933c" style="width: 100.0%; height: 100.0%;"><b>Stop 24</b><br>Santa Clarita<br>Step 24</div>`)[0];
+                popup_dd609295e0ae00243b479c1d8919b01e.setContent(html_f7a9616112c08d29f6b05bed8c76933c);
+            
+        
+
+        marker_44ada9aa898dc8bb440cde4fab645cf8.bindPopup(popup_dd609295e0ae00243b479c1d8919b01e)
+        ;
+
+        
+    
+    
+                marker_44ada9aa898dc8bb440cde4fab645cf8.setIcon(icon_cb0e1028e29bda3616cd9ed446ffc933);
+            
+    
+            var marker_ce51699b8b22284941c6cda8d31ed2e6 = L.marker(
+                [34.6868, -118.1542],
+                {
+}
+            ).addTo(map_735af1956ec13aec709ea9ccf16949f7);
+        
+    
+            var icon_7553cc33fa4328d67180d18d22b8e220 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_de72352bf8e87e983fa215d413f1cdce = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_5eb61d87582bd9e099e2d19934c3e0df = $(`<div id="html_5eb61d87582bd9e099e2d19934c3e0df" style="width: 100.0%; height: 100.0%;"><b>Stop 25</b><br>Lancaster<br>Step 25</div>`)[0];
+                popup_de72352bf8e87e983fa215d413f1cdce.setContent(html_5eb61d87582bd9e099e2d19934c3e0df);
+            
+        
+
+        marker_ce51699b8b22284941c6cda8d31ed2e6.bindPopup(popup_de72352bf8e87e983fa215d413f1cdce)
+        ;
+
+        
+    
+    
+                marker_ce51699b8b22284941c6cda8d31ed2e6.setIcon(icon_7553cc33fa4328d67180d18d22b8e220);
+            
+    
+            var marker_0801f60495ee52036b37a40977b00e2e = L.marker(
+                [34.5794, -118.1165],
+                {
+}
+            ).addTo(map_735af1956ec13aec709ea9ccf16949f7);
+        
+    
+            var icon_4ee01b6b4cf8c46ce3cf34975e1b4ec5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_88690c2714ae4a4ef09273fd7257fa00 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_d133a576c30c0b1b2e67cc7c6d63893f = $(`<div id="html_d133a576c30c0b1b2e67cc7c6d63893f" style="width: 100.0%; height: 100.0%;"><b>Stop 26</b><br>Palmdale<br>Step 26</div>`)[0];
+                popup_88690c2714ae4a4ef09273fd7257fa00.setContent(html_d133a576c30c0b1b2e67cc7c6d63893f);
+            
+        
+
+        marker_0801f60495ee52036b37a40977b00e2e.bindPopup(popup_88690c2714ae4a4ef09273fd7257fa00)
+        ;
+
+        
+    
+    
+                marker_0801f60495ee52036b37a40977b00e2e.setIcon(icon_4ee01b6b4cf8c46ce3cf34975e1b4ec5);
+            
+    
+            var marker_973269f9fc0f18baa3ded05a215a97d7 = L.marker(
+                [34.1425, -118.2551],
+                {
+}
+            ).addTo(map_735af1956ec13aec709ea9ccf16949f7);
+        
+    
+            var icon_97a1debb317829974d885dfe39661398 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e27ef4eabf2d5c350e500883d201f69c = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_20ec85e10ce33141ce269973f8fd262a = $(`<div id="html_20ec85e10ce33141ce269973f8fd262a" style="width: 100.0%; height: 100.0%;"><b>Stop 27</b><br>Glendale<br>Step 27</div>`)[0];
+                popup_e27ef4eabf2d5c350e500883d201f69c.setContent(html_20ec85e10ce33141ce269973f8fd262a);
+            
+        
+
+        marker_973269f9fc0f18baa3ded05a215a97d7.bindPopup(popup_e27ef4eabf2d5c350e500883d201f69c)
+        ;
+
+        
+    
+    
+                marker_973269f9fc0f18baa3ded05a215a97d7.setIcon(icon_97a1debb317829974d885dfe39661398);
+            
+    
+            var marker_7b954db514c0a7bc6c03e35721084f0a = L.marker(
+                [33.8358, -118.3406],
+                {
+}
+            ).addTo(map_735af1956ec13aec709ea9ccf16949f7);
+        
+    
+            var icon_0d937b941730725fade443c19a437c62 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_94a4d0b329d2c830e95d0ec41537a941 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_727f98dfbb8b3457c00a55fbb26029f9 = $(`<div id="html_727f98dfbb8b3457c00a55fbb26029f9" style="width: 100.0%; height: 100.0%;"><b>Stop 28</b><br>Torrance<br>Step 28</div>`)[0];
+                popup_94a4d0b329d2c830e95d0ec41537a941.setContent(html_727f98dfbb8b3457c00a55fbb26029f9);
+            
+        
+
+        marker_7b954db514c0a7bc6c03e35721084f0a.bindPopup(popup_94a4d0b329d2c830e95d0ec41537a941)
+        ;
+
+        
+    
+    
+                marker_7b954db514c0a7bc6c03e35721084f0a.setIcon(icon_0d937b941730725fade443c19a437c62);
+            
+    
+            var marker_cee17a3bc77b7efbaac4c8f824439611 = L.marker(
+                [33.7701, -118.1937],
+                {
+}
+            ).addTo(map_735af1956ec13aec709ea9ccf16949f7);
+        
+    
+            var icon_0b07185d2ce3acf421cf8492320a5e55 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a15710212a0d046e3ac3ac048592cc1e = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_a6b59a2098f115ad51cc2898e882366d = $(`<div id="html_a6b59a2098f115ad51cc2898e882366d" style="width: 100.0%; height: 100.0%;"><b>Stop 29</b><br>Long Beach<br>Step 29</div>`)[0];
+                popup_a15710212a0d046e3ac3ac048592cc1e.setContent(html_a6b59a2098f115ad51cc2898e882366d);
+            
+        
+
+        marker_cee17a3bc77b7efbaac4c8f824439611.bindPopup(popup_a15710212a0d046e3ac3ac048592cc1e)
+        ;
+
+        
+    
+    
+                marker_cee17a3bc77b7efbaac4c8f824439611.setIcon(icon_0b07185d2ce3acf421cf8492320a5e55);
+            
+    
+            var marker_e3c7573de23c9fdf825f957687435474 = L.marker(
+                [33.6595, -117.9988],
+                {
+}
+            ).addTo(map_735af1956ec13aec709ea9ccf16949f7);
+        
+    
+            var icon_97e82c261379e6a32389f0a105f78f92 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2d185c3cd2bd9b262584d5c9a5535cb3 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_9b2f4a438359b80363933326e06d1c93 = $(`<div id="html_9b2f4a438359b80363933326e06d1c93" style="width: 100.0%; height: 100.0%;"><b>Stop 30</b><br>Huntington Beach<br>Step 30</div>`)[0];
+                popup_2d185c3cd2bd9b262584d5c9a5535cb3.setContent(html_9b2f4a438359b80363933326e06d1c93);
+            
+        
+
+        marker_e3c7573de23c9fdf825f957687435474.bindPopup(popup_2d185c3cd2bd9b262584d5c9a5535cb3)
+        ;
+
+        
+    
+    
+                marker_e3c7573de23c9fdf825f957687435474.setIcon(icon_97e82c261379e6a32389f0a105f78f92);
+            
+    
+            var marker_dfba317c53ea935ff0b3973451ded99c = L.marker(
+                [33.6846, -117.8265],
+                {
+}
+            ).addTo(map_735af1956ec13aec709ea9ccf16949f7);
+        
+    
+            var icon_3bbc101b57341b29b9fc3409516ebec5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_62d7ee0a8d4bab4c58ff34ae13636aef = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_b5e831ed4e4af83712ac5fd56cb6a2a5 = $(`<div id="html_b5e831ed4e4af83712ac5fd56cb6a2a5" style="width: 100.0%; height: 100.0%;"><b>Stop 31</b><br>Irvine<br>Step 31</div>`)[0];
+                popup_62d7ee0a8d4bab4c58ff34ae13636aef.setContent(html_b5e831ed4e4af83712ac5fd56cb6a2a5);
+            
+        
+
+        marker_dfba317c53ea935ff0b3973451ded99c.bindPopup(popup_62d7ee0a8d4bab4c58ff34ae13636aef)
+        ;
+
+        
+    
+    
+                marker_dfba317c53ea935ff0b3973451ded99c.setIcon(icon_3bbc101b57341b29b9fc3409516ebec5);
+            
+    
+            var marker_a044290d4570b9caac6819ab9be3a5c1 = L.marker(
+                [33.7455, -117.8677],
+                {
+}
+            ).addTo(map_735af1956ec13aec709ea9ccf16949f7);
+        
+    
+            var icon_c34c5be7793b362b14c04a0822351488 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_77e222ed0906544e8afffa37f17084f1 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_87cb8024859a0219908bc640119479e1 = $(`<div id="html_87cb8024859a0219908bc640119479e1" style="width: 100.0%; height: 100.0%;"><b>Stop 32</b><br>Santa Ana<br>Step 32</div>`)[0];
+                popup_77e222ed0906544e8afffa37f17084f1.setContent(html_87cb8024859a0219908bc640119479e1);
+            
+        
+
+        marker_a044290d4570b9caac6819ab9be3a5c1.bindPopup(popup_77e222ed0906544e8afffa37f17084f1)
+        ;
+
+        
+    
+    
+                marker_a044290d4570b9caac6819ab9be3a5c1.setIcon(icon_c34c5be7793b362b14c04a0822351488);
+            
+    
+            var marker_2fa679a0af4dad903da6eb4f80a9085b = L.marker(
+                [33.7879, -117.8531],
+                {
+}
+            ).addTo(map_735af1956ec13aec709ea9ccf16949f7);
+        
+    
+            var icon_fe7f293e641d4dccb8aca0add15a20bf = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4e05e15f0f11e4a33eb898d77ceee08a = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_57290fa3d067cff30e59270aac4700a2 = $(`<div id="html_57290fa3d067cff30e59270aac4700a2" style="width: 100.0%; height: 100.0%;"><b>Stop 33</b><br>Orange<br>Step 33</div>`)[0];
+                popup_4e05e15f0f11e4a33eb898d77ceee08a.setContent(html_57290fa3d067cff30e59270aac4700a2);
+            
+        
+
+        marker_2fa679a0af4dad903da6eb4f80a9085b.bindPopup(popup_4e05e15f0f11e4a33eb898d77ceee08a)
+        ;
+
+        
+    
+    
+                marker_2fa679a0af4dad903da6eb4f80a9085b.setIcon(icon_fe7f293e641d4dccb8aca0add15a20bf);
+            
+    
+            var marker_b284a3203d17a86914086be26dc359ee = L.marker(
+                [33.7743, -117.9379],
+                {
+}
+            ).addTo(map_735af1956ec13aec709ea9ccf16949f7);
+        
+    
+            var icon_67db711efb80bae69d2d2801bf11f0ed = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_48faaf4a64ff3a5ee80d186b62f3543f = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_35a28a490250a80d94fba93164315c82 = $(`<div id="html_35a28a490250a80d94fba93164315c82" style="width: 100.0%; height: 100.0%;"><b>Stop 34</b><br>Garden Grove<br>Step 34</div>`)[0];
+                popup_48faaf4a64ff3a5ee80d186b62f3543f.setContent(html_35a28a490250a80d94fba93164315c82);
+            
+        
+
+        marker_b284a3203d17a86914086be26dc359ee.bindPopup(popup_48faaf4a64ff3a5ee80d186b62f3543f)
+        ;
+
+        
+    
+    
+                marker_b284a3203d17a86914086be26dc359ee.setIcon(icon_67db711efb80bae69d2d2801bf11f0ed);
+            
+    
+            var marker_d0f37d832ffb1df0feef5395c76f900f = L.marker(
+                [33.8366, -117.9143],
+                {
+}
+            ).addTo(map_735af1956ec13aec709ea9ccf16949f7);
+        
+    
+            var icon_82758a56b8baaa957485774a807f2826 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2b428bd4b480ce6bd5420da627169bde = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_c277fa222eab646411c943a26a8846ec = $(`<div id="html_c277fa222eab646411c943a26a8846ec" style="width: 100.0%; height: 100.0%;"><b>Stop 35</b><br>Anaheim<br>Step 35</div>`)[0];
+                popup_2b428bd4b480ce6bd5420da627169bde.setContent(html_c277fa222eab646411c943a26a8846ec);
+            
+        
+
+        marker_d0f37d832ffb1df0feef5395c76f900f.bindPopup(popup_2b428bd4b480ce6bd5420da627169bde)
+        ;
+
+        
+    
+    
+                marker_d0f37d832ffb1df0feef5395c76f900f.setIcon(icon_82758a56b8baaa957485774a807f2826);
+            
+    
+            var marker_f905efc113368a6414bc829c635b23c3 = L.marker(
+                [33.8704, -117.9242],
+                {
+}
+            ).addTo(map_735af1956ec13aec709ea9ccf16949f7);
+        
+    
+            var icon_075dfc18cd4837871f815a6cc0b66458 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_699171b5814c54fb7f1dcafe8c19919a = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_3948f457e966805e7acb10fcc9fcb008 = $(`<div id="html_3948f457e966805e7acb10fcc9fcb008" style="width: 100.0%; height: 100.0%;"><b>Stop 36</b><br>Fullerton<br>Step 36</div>`)[0];
+                popup_699171b5814c54fb7f1dcafe8c19919a.setContent(html_3948f457e966805e7acb10fcc9fcb008);
+            
+        
+
+        marker_f905efc113368a6414bc829c635b23c3.bindPopup(popup_699171b5814c54fb7f1dcafe8c19919a)
+        ;
+
+        
+    
+    
+                marker_f905efc113368a6414bc829c635b23c3.setIcon(icon_075dfc18cd4837871f815a6cc0b66458);
+            
+    
+            var marker_97d88472c5f2ead8fe39e623c804832e = L.marker(
+                [34.0551, -117.749],
+                {
+}
+            ).addTo(map_735af1956ec13aec709ea9ccf16949f7);
+        
+    
+            var icon_e5ced9a883aa2c1b2448568812d5e39b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8731ede846764021d43cb0d6e284fc52 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_5600a9a85483bce70fd57efaef0b5cab = $(`<div id="html_5600a9a85483bce70fd57efaef0b5cab" style="width: 100.0%; height: 100.0%;"><b>Stop 37</b><br>Pomona<br>Step 37</div>`)[0];
+                popup_8731ede846764021d43cb0d6e284fc52.setContent(html_5600a9a85483bce70fd57efaef0b5cab);
+            
+        
+
+        marker_97d88472c5f2ead8fe39e623c804832e.bindPopup(popup_8731ede846764021d43cb0d6e284fc52)
+        ;
+
+        
+    
+    
+                marker_97d88472c5f2ead8fe39e623c804832e.setIcon(icon_e5ced9a883aa2c1b2448568812d5e39b);
+            
+    
+            var marker_11aa59e600d93df2668fb7ac264b1901 = L.marker(
+                [34.0633, -117.6509],
+                {
+}
+            ).addTo(map_735af1956ec13aec709ea9ccf16949f7);
+        
+    
+            var icon_79dff4e8ca3ebd8634066205f1fa13d3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_22a7411b52937e8e4f61a642d2d263c3 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_671a54e1a80a3446758ced01db8a538c = $(`<div id="html_671a54e1a80a3446758ced01db8a538c" style="width: 100.0%; height: 100.0%;"><b>Stop 38</b><br>Ontario<br>Step 38</div>`)[0];
+                popup_22a7411b52937e8e4f61a642d2d263c3.setContent(html_671a54e1a80a3446758ced01db8a538c);
+            
+        
+
+        marker_11aa59e600d93df2668fb7ac264b1901.bindPopup(popup_22a7411b52937e8e4f61a642d2d263c3)
+        ;
+
+        
+    
+    
+                marker_11aa59e600d93df2668fb7ac264b1901.setIcon(icon_79dff4e8ca3ebd8634066205f1fa13d3);
+            
+    
+            var marker_4feba71859327ec70cb4c3c2f4449182 = L.marker(
+                [34.1064, -117.5931],
+                {
+}
+            ).addTo(map_735af1956ec13aec709ea9ccf16949f7);
+        
+    
+            var icon_9b7ee73b7fb22132038e9872b7fe1713 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_23a1baa613b459ae05d11bcd610ba051 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_dac0e7e60da427081ee4a8097b05d53b = $(`<div id="html_dac0e7e60da427081ee4a8097b05d53b" style="width: 100.0%; height: 100.0%;"><b>Stop 39</b><br>Rancho Cucamonga<br>Step 39</div>`)[0];
+                popup_23a1baa613b459ae05d11bcd610ba051.setContent(html_dac0e7e60da427081ee4a8097b05d53b);
+            
+        
+
+        marker_4feba71859327ec70cb4c3c2f4449182.bindPopup(popup_23a1baa613b459ae05d11bcd610ba051)
+        ;
+
+        
+    
+    
+                marker_4feba71859327ec70cb4c3c2f4449182.setIcon(icon_9b7ee73b7fb22132038e9872b7fe1713);
+            
+    
+            var marker_5c8e8449d969309da5a00c4d63dc847d = L.marker(
+                [33.1959, -117.3795],
+                {
+}
+            ).addTo(map_735af1956ec13aec709ea9ccf16949f7);
+        
+    
+            var icon_ad169102f87032e74416990f45fea661 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bdaf4705914d427c7f35ef36b00b7da8 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_a2bc052701c51220387031b8881bfe22 = $(`<div id="html_a2bc052701c51220387031b8881bfe22" style="width: 100.0%; height: 100.0%;"><b>Stop 40</b><br>Oceanside<br>Step 40</div>`)[0];
+                popup_bdaf4705914d427c7f35ef36b00b7da8.setContent(html_a2bc052701c51220387031b8881bfe22);
+            
+        
+
+        marker_5c8e8449d969309da5a00c4d63dc847d.bindPopup(popup_bdaf4705914d427c7f35ef36b00b7da8)
+        ;
+
+        
+    
+    
+                marker_5c8e8449d969309da5a00c4d63dc847d.setIcon(icon_ad169102f87032e74416990f45fea661);
+            
+    
+            var marker_0fd38c6e8961a017f3b1dd5ff1740b46 = L.marker(
+                [32.7157, -117.1611],
+                {
+}
+            ).addTo(map_735af1956ec13aec709ea9ccf16949f7);
+        
+    
+            var icon_5e3e7f3f5c63b48e23bf9312389f3b64 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_008282165a60d434f9fd781d53217d16 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_0dbd15589419117d2410396551923b9d = $(`<div id="html_0dbd15589419117d2410396551923b9d" style="width: 100.0%; height: 100.0%;"><b>Stop 41</b><br>San Diego<br>Step 41</div>`)[0];
+                popup_008282165a60d434f9fd781d53217d16.setContent(html_0dbd15589419117d2410396551923b9d);
+            
+        
+
+        marker_0fd38c6e8961a017f3b1dd5ff1740b46.bindPopup(popup_008282165a60d434f9fd781d53217d16)
+        ;
+
+        
+    
+    
+                marker_0fd38c6e8961a017f3b1dd5ff1740b46.setIcon(icon_5e3e7f3f5c63b48e23bf9312389f3b64);
+            
+    
+            var marker_52abd5c2c0a29bd881fabee6b792ac07 = L.marker(
+                [32.6401, -117.0842],
+                {
+}
+            ).addTo(map_735af1956ec13aec709ea9ccf16949f7);
+        
+    
+            var icon_69decbef6259f183358102f01cf44d7b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a225adafdac4a3ee6092ed1902a88f63 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_446ec8586768a132597161733de4debb = $(`<div id="html_446ec8586768a132597161733de4debb" style="width: 100.0%; height: 100.0%;"><b>Stop 42</b><br>Chula Vista<br>Step 42</div>`)[0];
+                popup_a225adafdac4a3ee6092ed1902a88f63.setContent(html_446ec8586768a132597161733de4debb);
+            
+        
+
+        marker_52abd5c2c0a29bd881fabee6b792ac07.bindPopup(popup_a225adafdac4a3ee6092ed1902a88f63)
+        ;
+
+        
+    
+    
+                marker_52abd5c2c0a29bd881fabee6b792ac07.setIcon(icon_69decbef6259f183358102f01cf44d7b);
+            
+    
+            var marker_f537cb544ca8584043f1df6e42218d51 = L.marker(
+                [33.1192, -117.0864],
+                {
+}
+            ).addTo(map_735af1956ec13aec709ea9ccf16949f7);
+        
+    
+            var icon_d0c6b3835d559be0ae409ff00be03eca = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_92c2a6324469bb85f0080d1dbe2e8d2e = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_18c7638ad8d71706a106ec92de9a0b80 = $(`<div id="html_18c7638ad8d71706a106ec92de9a0b80" style="width: 100.0%; height: 100.0%;"><b>Stop 43</b><br>Escondido<br>Step 43</div>`)[0];
+                popup_92c2a6324469bb85f0080d1dbe2e8d2e.setContent(html_18c7638ad8d71706a106ec92de9a0b80);
+            
+        
+
+        marker_f537cb544ca8584043f1df6e42218d51.bindPopup(popup_92c2a6324469bb85f0080d1dbe2e8d2e)
+        ;
+
+        
+    
+    
+                marker_f537cb544ca8584043f1df6e42218d51.setIcon(icon_d0c6b3835d559be0ae409ff00be03eca);
+            
+    
+            var marker_13f440efadf4453900753e34e8b1a5db = L.marker(
+                [33.9425, -117.2297],
+                {
+}
+            ).addTo(map_735af1956ec13aec709ea9ccf16949f7);
+        
+    
+            var icon_98ec591a70a5ee9fb2c0cf6f26745381 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8364ddb4100d17719daa6531e0854126 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_ccb680d4a59c7c0966450524a4181265 = $(`<div id="html_ccb680d4a59c7c0966450524a4181265" style="width: 100.0%; height: 100.0%;"><b>Stop 44</b><br>Moreno Valley<br>Step 44</div>`)[0];
+                popup_8364ddb4100d17719daa6531e0854126.setContent(html_ccb680d4a59c7c0966450524a4181265);
+            
+        
+
+        marker_13f440efadf4453900753e34e8b1a5db.bindPopup(popup_8364ddb4100d17719daa6531e0854126)
+        ;
+
+        
+    
+    
+                marker_13f440efadf4453900753e34e8b1a5db.setIcon(icon_98ec591a70a5ee9fb2c0cf6f26745381);
+            
+    
+            var marker_4bacb30581946bf44564fb13e94e7416 = L.marker(
+                [33.9806, -117.3755],
+                {
+}
+            ).addTo(map_735af1956ec13aec709ea9ccf16949f7);
+        
+    
+            var icon_dd1c14d3234c20a74921f081564cfcc0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_202eb07078e0f7fc7f93187bfc791a0d = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_a4360c157adfe3dfa7c3821019618db7 = $(`<div id="html_a4360c157adfe3dfa7c3821019618db7" style="width: 100.0%; height: 100.0%;"><b>Stop 45</b><br>Riverside<br>Step 45</div>`)[0];
+                popup_202eb07078e0f7fc7f93187bfc791a0d.setContent(html_a4360c157adfe3dfa7c3821019618db7);
+            
+        
+
+        marker_4bacb30581946bf44564fb13e94e7416.bindPopup(popup_202eb07078e0f7fc7f93187bfc791a0d)
+        ;
+
+        
+    
+    
+                marker_4bacb30581946bf44564fb13e94e7416.setIcon(icon_dd1c14d3234c20a74921f081564cfcc0);
+            
+    
+            var marker_a6e6722544376980e26459470308ab13 = L.marker(
+                [34.0922, -117.435],
+                {
+}
+            ).addTo(map_735af1956ec13aec709ea9ccf16949f7);
+        
+    
+            var icon_af38071fb14600c4a4c99df987870d65 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2df097008403f51a27d8687b44b7bed3 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_d7f204a9e38287fe071ea1a5d030f76f = $(`<div id="html_d7f204a9e38287fe071ea1a5d030f76f" style="width: 100.0%; height: 100.0%;"><b>Stop 46</b><br>Fontana<br>Step 46</div>`)[0];
+                popup_2df097008403f51a27d8687b44b7bed3.setContent(html_d7f204a9e38287fe071ea1a5d030f76f);
+            
+        
+
+        marker_a6e6722544376980e26459470308ab13.bindPopup(popup_2df097008403f51a27d8687b44b7bed3)
+        ;
+
+        
+    
+    
+                marker_a6e6722544376980e26459470308ab13.setIcon(icon_af38071fb14600c4a4c99df987870d65);
+            
+    
+            var marker_c919ba35ee583c460322b449c887cdb4 = L.marker(
+                [34.1083, -117.2898],
+                {
+}
+            ).addTo(map_735af1956ec13aec709ea9ccf16949f7);
+        
+    
+            var icon_2cf90de1f760d54be069da4d2aa37a14 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a685df00b30833745a9827b09a745686 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_e93b7267269b842094f5a25036f1cad4 = $(`<div id="html_e93b7267269b842094f5a25036f1cad4" style="width: 100.0%; height: 100.0%;"><b>Stop 47</b><br>San Bernardino<br>Step 47</div>`)[0];
+                popup_a685df00b30833745a9827b09a745686.setContent(html_e93b7267269b842094f5a25036f1cad4);
+            
+        
+
+        marker_c919ba35ee583c460322b449c887cdb4.bindPopup(popup_a685df00b30833745a9827b09a745686)
+        ;
+
+        
+    
+    
+                marker_c919ba35ee583c460322b449c887cdb4.setIcon(icon_2cf90de1f760d54be069da4d2aa37a14);
+            
+    
+            var marker_d6ebdd25565e837b3768fe1fe230134a = L.marker(
+                [34.5361, -117.2912],
+                {
+}
+            ).addTo(map_735af1956ec13aec709ea9ccf16949f7);
+        
+    
+            var icon_86e1f0b7757119b5e2b70d03a31c0467 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_766d3258ebc4e632cca75e3ed6e11bbf = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_ac1e6b289156dc66fc28300840b08e08 = $(`<div id="html_ac1e6b289156dc66fc28300840b08e08" style="width: 100.0%; height: 100.0%;"><b>Stop 48</b><br>Victorville<br>Step 48</div>`)[0];
+                popup_766d3258ebc4e632cca75e3ed6e11bbf.setContent(html_ac1e6b289156dc66fc28300840b08e08);
+            
+        
+
+        marker_d6ebdd25565e837b3768fe1fe230134a.bindPopup(popup_766d3258ebc4e632cca75e3ed6e11bbf)
+        ;
+
+        
+    
+    
+                marker_d6ebdd25565e837b3768fe1fe230134a.setIcon(icon_86e1f0b7757119b5e2b70d03a31c0467);
+            
+    
+            var marker_4b27c5af11319ae54bb11577699beb0f = L.marker(
+                [34.1478, -118.1445],
+                {
+}
+            ).addTo(map_735af1956ec13aec709ea9ccf16949f7);
+        
+    
+            var icon_09d9d436823f852ae7c36b4e7464e9b9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b8af43f4a0a9d9d3f7b311e845f413b2 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_deae8ba485e1c192c0dd0697919a0c9a = $(`<div id="html_deae8ba485e1c192c0dd0697919a0c9a" style="width: 100.0%; height: 100.0%;"><b>Stop 49</b><br>Pasadena<br>Step 49</div>`)[0];
+                popup_b8af43f4a0a9d9d3f7b311e845f413b2.setContent(html_deae8ba485e1c192c0dd0697919a0c9a);
+            
+        
+
+        marker_4b27c5af11319ae54bb11577699beb0f.bindPopup(popup_b8af43f4a0a9d9d3f7b311e845f413b2)
+        ;
+
+        
+    
+    
+                marker_4b27c5af11319ae54bb11577699beb0f.setIcon(icon_09d9d436823f852ae7c36b4e7464e9b9);
+            
+    
+            var marker_24e0c092787b6dee23a6016f8b8ae6ac = L.marker(
+                [34.0522, -118.2437],
+                {
+}
+            ).addTo(map_735af1956ec13aec709ea9ccf16949f7);
+        
+    
+            var icon_b16a4ad790cd595aef3d76d687574688 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_47c348ee9b7256c2a7bb6f02c63e4717 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_5e3482af31a64e34e97bb6a5151b142f = $(`<div id="html_5e3482af31a64e34e97bb6a5151b142f" style="width: 100.0%; height: 100.0%;"><b>Final Destination</b><br>Los Angeles<br>Step 50</div>`)[0];
+                popup_47c348ee9b7256c2a7bb6f02c63e4717.setContent(html_5e3482af31a64e34e97bb6a5151b142f);
+            
+        
+
+        marker_24e0c092787b6dee23a6016f8b8ae6ac.bindPopup(popup_47c348ee9b7256c2a7bb6f02c63e4717)
+        ;
+
+        
+    
+    
+                marker_24e0c092787b6dee23a6016f8b8ae6ac.setIcon(icon_b16a4ad790cd595aef3d76d687574688);
+            
+</script>
+</html>
